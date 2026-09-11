@@ -62,30 +62,5 @@ function mostraResultado() {
     caixaPerguntas.textContent = "Em 2049...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
+
 }
-
-mostraPergunta();
-
-// ... código anterior ...
-const perguntas = [
-    {
-        enunciado: "Sua primeira pergunta?",
-        alternativas: [
-            {
-                texto: "Alternativa 1",
-                afirmacao: [
-                    "Sua primeira afirmação.",
-                    "Outra afirmação relacionada à alternativa 1."
-                ]
-            },
-            {
-                texto: "Alternativa 2",
-                afirmacao: [
-                    "Sua segunda afirmação.",
-                    "Mais uma afirmação para a alternativa 2."
-                ]
-            }
-        ]
-    }
-];
-// ... código posterior ...

@@ -10,6 +10,7 @@
 body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
+    font-family: 'Inter', sans-serif; /* Esta linha deve ser adicionada */
     display: flex;
     justify-content: center;
     align-items: center;

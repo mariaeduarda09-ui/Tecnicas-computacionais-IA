@@ -1,3 +1,4 @@
+import {aleatorio, nome} from './aleatorio.js';
 import {aleatorio} from './aleatorio.js';
 import {perguntas} from './perguntas.js';
 const caixaPrincipal = document.querySelector(".caixa-principal");
@@ -34,12 +35,14 @@ let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
 
+substituiNome();
+
 function mostraPergunta() {
     if (atual >= perguntas.length) {
         mostraResultado();
         
 function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
+    caixaPerguntas.textContent = "Em 2049, ${nome}";
     textoResultado.textContent historiaFinal;
     caixaAlternativas.textContent = "";
     caixaResultado.classList.add("mostrar"); // Esta linha deve ser adicionada
@@ -71,6 +74,12 @@ function jogaNovamente(){
     historiaFinal = "";
     caixaResultado.classList.remove("mostrar"); // Esta linha deve ser adicionada
     mostraPergunta();
+}
+
+ function substituiNome(){
+    for(const pergunta of perguntas){
+        pergunta.enunciado = pergunta.enunciado.replace(/você/g, nome);
+    }
 }
     
 function mostraResultado() {

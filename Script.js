@@ -37,7 +37,13 @@ let historiaFinal = "";
 function mostraPergunta() {
     if (atual >= perguntas.length) {
         mostraResultado();
-        return;
+        
+ function mostraResultado() {
+        caixaPerguntas.textContent = "Em 2049...";
+        textoResultado.textContent = historiaFinal;
+        caixaAlternativas.textContent = "";
+        botaoJogarNovamente.addEventListener("click", jogaNovamente());
+}
     }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;

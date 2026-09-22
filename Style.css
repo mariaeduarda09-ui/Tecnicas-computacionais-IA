@@ -25,6 +25,20 @@ body {
     padding: 20px;
 }
 
+.caixa-resultado{ /* Este seletor e as propriedades devem ser adicionados */
+    display: none;
+}
+
+.caixa-resultado.mostrar{ /* Este seletor e as propriedades devem ser adicionados */
+    display: block;
+}
+
+.caixa-alternativas{ /* Este seletor e as propriedades devem ser adicionados */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 h1, .caixa-perguntas, .caixa-resultado{ /* Este seletor e as propriedades devem ser adicionados */
     font-family: 'Chakra Petch', sans-serif;
 }

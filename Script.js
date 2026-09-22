@@ -38,11 +38,12 @@ function mostraPergunta() {
     if (atual >= perguntas.length) {
         mostraResultado();
         
- function mostraResultado() {
-        caixaPerguntas.textContent = "Em 2049...";
-        textoResultado.textContent = historiaFinal;
-        caixaAlternativas.textContent = "";
-        botaoJogarNovamente.addEventListener("click", jogaNovamente());
+function mostraResultado() {
+    caixaPerguntas.textContent = "Em 2049...";
+    textoResultado.textContent historiaFinal;
+    caixaAlternativas.textContent = "";
+    caixaResultado.classList.add("mostrar"); // Esta linha deve ser adicionada
+    botaoJogarNovamente.addEventListener("click", jogaNovamente); // Esta linha deve ser corrigida (removendo os parênteses de jogaNovamente)
 }
     }
     perguntaAtual = perguntas[atual];

@@ -67,12 +67,12 @@ function respostaSelecionada(opcaoSelecionada) {
     atual++;
 
 function jogaNovamente(){
-        atual = 0;
-        historiaFinal = "";
-        mostraPergunta();
-    
+    atual = 0;
+    historiaFinal = "";
+    caixaResultado.classList.remove("mostrar"); // Esta linha deve ser adicionada
+    mostraPergunta();
 }
-
+    
 function mostraResultado() {
     caixaPerguntas.textContent = "Em 2049...";
     textoResultado.textContent = historiaFinal;

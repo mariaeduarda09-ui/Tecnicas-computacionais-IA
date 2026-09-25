@@ -36,8 +36,19 @@ const perguntas = [
 let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
+botaoIniciar.addEventListener('click', iniciaJogo);
 
 substituiNome();
+
+function iniciaJogo() {
+    atual = 0;
+    historiaFinal = "";
+    telaInicial.style.display = 'none';
+    caixaPerguntas.classList.remove("mostrar");
+    caixaAlternativas.classList.remove("mostrar");
+    caixaResultado.classList.remove("mostrar");
+    mostraPergunta();
+}
 
 function mostraPergunta() {
     if (atual >= perguntas.length) {
@@ -109,6 +120,6 @@ function respostaSelecionada(opcaoSelecionada){
         const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
         historiaFinal += afirmacoes + " ";
         atual++;
-        mostraPergunta();
+substituiNome();
 }
 
